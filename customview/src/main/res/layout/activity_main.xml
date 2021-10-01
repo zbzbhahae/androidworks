@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    app:divider="@drawable/shape_divider"
+    app:showDividers="middle"
+    >
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        <com.zb.customview.widgets.TextDraw-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            app:textSize="50sp"-->
+<!--            app:textColor="#f0f00f"-->
+<!--            app:inputType="number"-->
+<!--            app:text=" jE~"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:background="#C4C4C4"/>-->
+<!--    </ScrollView>-->
+
+    <com.zb.customview.widgets.FPSView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="#C8C8C8"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.zb.customview.widgets.CustomRattingBar
+        android:id="@+id/myRattingBar"
+        android:layout_width="150dp"
+        android:layout_height="30dp"/>
+    <com.zb.customview.widgets.ChangingProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <com.zb.customview.widgets.RoundProgressBar
+        android:id="@+id/RoundProgressBar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:RoundProgressBar_borderWidth="5dp"
+        app:RoundProgressBar_innerColor="#0ff000"
+        app:RoundProgressBar_outColor="#ff0000"
+        app:RoundProgressBar_textColor="#fff000"
+        app:RoundProgressBar_textSize="33sp"
+        app:RoundProgressBar_percent="0.38333"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zb.customview.widgets.FlowLayout
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="15dp"
+        android:background="#FFA3A3A3"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fsfds"
+            android:background="#FFFF0000"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#FFFF0000"/>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#FFFF0000"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#FFFF0000"/>
+    </com.zb.customview.widgets.FlowLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

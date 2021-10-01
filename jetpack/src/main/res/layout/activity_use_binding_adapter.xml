@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="imageUrlInXML"
+            type="String" />
+        <variable
+            name="localImageInXML"
+            type="int" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.UseBindingAdapterActivity">
+        <!--            app:imageurl="@{imageUrlInXML}"-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="252dp"
+            android:layout_height="281dp"
+            android:layout_marginTop="100dp"
+            app:default_image = "@{localImageInXML}"
+            app:imageurl="@{imageUrlInXML}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Review</string>
+
+    <string name="navigation_bottom_1">主页</string>
+    <string name="navigation_bottom_2">攻略</string>
+    <string name="navigation_bottom_3">提醒</string>
+    <string name="navigation_bottom_4">更多</string>
+</resources>

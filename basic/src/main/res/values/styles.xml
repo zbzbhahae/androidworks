@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="UnderLineColoredEditText" parent="Theme.AppCompat.Light">
+        <!-- 默认状态提示颜色和字体-->
+        <item name="android:textColorHint">#8c8c8c</item>
+        <item name="android:textSize">14sp</item>
+        <!-- 下面可以根据需要设置，如果没有将默认使用默认theme的颜色 -->
+        <!-- Label标签的颜色 -->
+        <item name="colorAccent">#c6174e</item>
+        <!-- 默认状态状态设置底线颜色 -->
+        <item name="colorControlNormal">#3F51b5</item>
+        <!-- 选择的底线颜色 -->
+        <item name="colorControlActivated">#c6174e</item>
+
+    </style>
+
+<!--    定义一个样式-->
+    <style name="GreenText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#00ff00</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#A3A3A3</item>
+        <item name="android:padding">5dp</item>
+    </style>
+<!--    定义一个自定义样式的扩展样式 与GreenText相比字体大了-->
+    <style name="GreenText.Large">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

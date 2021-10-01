@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-files-path name="my_images"
+        path="Android/data/com.example.package.name/files/Pictures" />
+    <external-path
+        name="files_root"
+        path="Android/data/com.zb.review"/>
+    <external-path
+        name="all_root"
+        path="."/>
+</paths>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zb.review">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/newtwork_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Review"><!--networkSecurityConfig 允许使用http链接 -->
+        <activity
+            android:name=".acts.CardViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".acts.ReviewFragmentActivity" />
+        <activity android:name=".acts.ReviewServiceActivity" />
+        <activity android:name=".acts.ReviewServiceMessengerActivity" />
+        <activity android:name=".acts.data.SqliteActivity" />
+        <activity android:name=".acts.data.FileCacheActivity" />
+        <activity android:name=".acts.data.RoomDatabaseActivity" />
+        <activity android:name=".acts.data.GreendaoActivity" />
+        <activity android:name=".acts.fragment.TabFragmentActivity" />
+        <activity android:name=".acts.network.HttpActivity" />
+        <activity android:name=".acts.network.okhttp.OkhttpActivity" />
+        <activity android:name=".acts.network.RxJavaActivity" />
+        <activity android:name=".acts.network.retrofit.RetrofitActivity" />
+        <activity android:name=".acts.network.GlideActivity" />
+        <activity android:name=".acts.CustomViewActivity" />
+        <activity android:name=".acts.AnimatorActivity" />
+        <activity android:name=".acts.TouchActivity" />
+        <activity android:name=".acts.ViewpagerActivity" />
+        <activity android:name=".acts.camera.TakePictureActivity" />
+        <activity android:name=".acts.MVPActivity" />
+        <activity
+            android:name=".acts.PopupActivity"
+            android:theme="@style/Theme.Popup" />
+        <activity android:name=".dagger.FirstActivity" />
+        <activity android:name=".dagger.SecondActivity" />
+        <activity android:name=".dagger.ThirdActivity" />
+        <activity android:name=".acts.PhotoViewActivity" />
+        <activity android:name=".acts.camera.CompressActivity" />
+        <activity android:name=".rxj.RxJavaActivity2" />
+        <activity android:name=".acts.ActionBarActivity" />
+        <activity android:name=".acts.WebviewInteractiveActivity"/>
+
+        <service android:name=".services.ReviewService" />
+        <service android:name=".services.ReviewService2" />
+        <service
+            android:name=".services.MessengerService"
+            android:process=":a" /> <!-- 7.0以上uri管理 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.zb.review.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver
+            android:name=".broadcast.TelephoneReceiver"
+            android:enabled="true"
+            android:permission="android.permission.READ_PHONE_STATE">
+
+            <!-- android:enabled=["true" | "false"] -->
+            <!-- //此broadcastReceiver能否接收其他App的发出的广播 -->
+            <!-- //默认值是由receiver中有无intent-filter决定的：如果有intent-filter，默认值为true，否则为false -->
+            <!-- android:exported=["true" | "false"] -->
+            <!-- android:icon="drawable resource" -->
+            <!-- android:label="string resource" -->
+            <!-- //继承BroadcastReceiver子类的类名 -->
+            <!-- android:name=".mBroadcastReceiver" -->
+            <!-- //具有相应权限的广播发送者发送的广播才能被此BroadcastReceiver所接收； -->
+            <!-- android:permission="string" -->
+            <!-- //BroadcastReceiver运行所处的进程 -->
+            <!-- //默认为app的进程，可以指定独立的进程 -->
+            <!-- //注：Android四大基本组件都可以通过此属性指定自己的独立进程 -->
+            <!-- android:process="string" > -->
+
+
+            <!-- //用于指定此广播接收器将接收的广播类型 -->
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="com.zb.review.custom" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

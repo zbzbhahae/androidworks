@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.zb.jetpack.mvvm.viewmodel.ScoreViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.22" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <TextView
+            android:id="@+id/team_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/guideline2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline1"
+            android:layout_marginBottom="30dp"
+            android:text="TEAM A"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/team_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/guideline2"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="30dp"
+            android:text="TEAM B"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/score_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/guideline2"
+            app:layout_constraintBottom_toTopOf="@id/guideline3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline1"
+            android:text="@{String.valueOf(viewModel.scoreA)}"
+            android:textColor="@color/blue"
+            android:textSize="80sp" />
+
+        <TextView
+            android:id="@+id/score_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/guideline2"
+            app:layout_constraintBottom_toTopOf="@id/guideline3"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@{String.valueOf(viewModel.scoreB)}"
+            android:textColor="@color/red"
+            android:textSize="80sp" />
+
+        <Button
+            android:id="@+id/button_left_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/guideline3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline1"
+            android:layout_marginTop="20dp"
+            android:text="+1"
+            android:onClick="@{()->viewModel.addScoreA(1)}"
+            android:textColor="@color/blue" />
+
+        <Button
+            android:id="@+id/button_left_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/button_left_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline1"
+            android:layout_marginTop="20dp"
+            android:text="+2"
+            android:onClick="@{()->viewModel.addScoreA(2)}"
+            android:textColor="@color/blue" />
+
+        <Button
+            android:id="@+id/button_left_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/button_left_2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline1"
+            android:layout_marginTop="20dp"
+            android:text="+3"
+            android:onClick="@{()->viewModel.addScoreA(3)}"
+            android:textColor="@color/blue" />
+
+
+        <Button
+            android:id="@+id/button_right_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/guideline3"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="20dp"
+            android:text="+1"
+            android:onClick="@{()->viewModel.addScoreB(1)}"
+            android:textColor="@color/red" />
+
+        <Button
+            android:id="@+id/button_right_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/button_right_1"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="20dp"
+            android:text="+2"
+            android:onClick="@{()->viewModel.addScoreB(2)}"
+            android:textColor="@color/red" />
+
+        <Button
+            android:id="@+id/button_right_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/button_right_2"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="20dp"
+            android:text="+3"
+            android:onClick="@{()->viewModel.addScoreB(3)}"
+            android:textColor="@color/red" />
+
+        <Button
+            android:id="@+id/button_go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline1"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:text="goBack"
+            android:onClick="@{()->viewModel.goBack()}"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/guideline1"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="30dp"
+            android:text="Reset"
+            android:onClick="@{()->viewModel.reset()}"
+            android:textColor="@color/black" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

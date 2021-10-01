@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!--progress盖着secondaryProgress盖着background
+但他们都不是背景-->
+<!--    最底下的那一管-->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#00FF00"/>
+        </shape>
+    </item>
+
+<!--    第二管，但不是progress当前进度的那管-->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <solid android:color="#000000"/>
+            </shape>
+        </clip>
+    </item>
+
+<!--    进度条那管-->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="#FF0000"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

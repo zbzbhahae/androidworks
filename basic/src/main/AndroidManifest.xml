@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zb.basic">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Review">
+        <activity android:name="com.zb.common.acts.TextButtonActivity"/>
+        <activity android:name=".acts.ServerActivity"/>
+        <activity android:name=".acts.okhttp.OkHttpActivity"/>
+        <activity
+            android:name=".acts.material.FloatingButtonActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.StyleThemeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.material.CardViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.constraint.ConstraintSetActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.surface.SurfaceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.SnackBarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.intent.IntentTestActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- <category android:name="android.intent.category.BROWSABLE"/> -->
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="review" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".acts.customview.View1Activity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.ViewTouchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.media.MediaRecorderActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.WXFragmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.FragActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.ViewPagerActivity"
+            android:exported="true" />
+        <activity android:name=".acts.ValueAnimationActivity" />
+        <activity android:name=".acts.TweenAnimationActivity" />
+        <activity
+            android:name=".acts.FrameAnimationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.RecyclerViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.ListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.ViewModelBetweenFragmentActivity"
+            android:exported="true" />
+        <activity android:name=".acts.LiveDataActivity" />
+        <activity
+            android:name=".acts.ViewPager2FragmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.AlertAndPopupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.ToolBarActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".acts.NotificationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.ProgressBarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.ImageViewActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".acts.EditTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acts.ButtonActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.APP_MAPS" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".acts.TextViewActivity" />
+
+        <service android:name=".service.AService" />
+    </application>
+
+</manifest>
