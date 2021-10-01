@@ -29,7 +29,7 @@ public class ViewA extends View {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        P.p("A(View)::dispatchTouchEvent()");
+        P.p("A(View)::dispatchTouchEvent() ");
         return super.dispatchTouchEvent(event);
     }
 
